@@ -1,3 +1,7 @@
+package com.pilot.command;
+
+import com.pilot.command.Command;
+
 public class Light implements Command {
     public Light() {  }
 
@@ -8,5 +12,10 @@ public class Light implements Command {
 
     public void turnOf() {
         System.out.println("światło wyłączone");
+    }
+
+    @Override
+    public void back() {
+
     }
 }

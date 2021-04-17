@@ -1,3 +1,7 @@
+package com.pilot.command;
+
+import com.pilot.command.Command;
+
 public class CommandHifiStop implements Command {
     Hifi hifi;
 
@@ -8,5 +12,10 @@ public class CommandHifiStop implements Command {
     @Override
     public void run() {
         hifi.turnOf();
+    }
+
+    @Override
+    public void back() {
+        hifi.run();
     }
 }

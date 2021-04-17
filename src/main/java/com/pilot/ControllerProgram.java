@@ -1,3 +1,7 @@
+package com.pilot;
+
+import com.pilot.command.*;
+
 public class ControllerProgram {
     public static void main(String[] args) {
         Controller controller = new Controller();
@@ -33,6 +37,7 @@ public class ControllerProgram {
         controller.pushedGreen(1);
         controller.pushedRed(1);
         controller.pushedGreen(2);
+        controller.pushBack();
         controller.pushedRed(2);
         controller.pushedGreen(3);
         controller.pushedRed(3);

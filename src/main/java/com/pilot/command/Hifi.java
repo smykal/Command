@@ -1,3 +1,7 @@
+package com.pilot.command;
+
+import com.pilot.command.Command;
+
 public class Hifi implements Command {
 
     public Hifi() {
@@ -5,8 +9,14 @@ public class Hifi implements Command {
 
     @Override
     public void run() {
-        System.out.println("Hifi uruchomione");
+        System.out.println("com.pilot.command.Hifi uruchomione");
     }
+
+    @Override
+    public void back() {
+
+    }
+
     public void turnOf() {
         System.out.println("hifi wyłączone");
     }

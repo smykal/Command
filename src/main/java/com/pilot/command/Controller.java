@@ -1,6 +1,11 @@
+package com.pilot.command;
+
+import com.pilot.command.Command;
+
 public class Controller {
     Command[] green;
     Command[] red;
+    Command back;
 
     public Controller() {
         green = new Command[7];
@@ -11,17 +16,25 @@ public class Controller {
             green[i] = noCommand;
             red[i] = noCommand;
         }
-
+        back = noCommand;
     }
     public void setCommand(int slot, Command green, Command red){
         this.green[slot] = green;
         this.red[slot] = red;
     }
+
     public void pushedGreen(int slot) {
         green[slot].run();
+        back = red[slot];
     }
+
     public void pushedRed(int slot) {
         red[slot].run();
+        back = green[slot];
+    }
+
+    public void pushBack() {
+        back.back();
     }
 
     @Override
